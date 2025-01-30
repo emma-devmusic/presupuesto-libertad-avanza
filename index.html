@@ -70,7 +70,7 @@
 
     <!-- Contenedor principal -->
     <div
-      class="container mx-auto px-4 py-8 relative z-50 h-[100vh] flex flex-col justify-center items-center text-center"
+      class="container mx-auto px-4 py-[60px] relative z-50 h-[100vh] flex flex-col sm:justify-center items-center text-center"
     >
       <!-- ENCABEZADO DE BIENVENIDA -->
       <header class="mb-8">
@@ -82,7 +82,7 @@
           />
         </figure>
         <h1
-          class="text-3xl font-bold text-gray-700 uppercase mb-4 animate-slideLeft"
+          class="text-3xl font-bold text-gray-700 uppercase mb-2.5 animate-slideLeft"
         >
           ¡Bienvenido!
         </h1>
@@ -93,34 +93,35 @@
 
       <!-- NAVEGADOR DE LINKS -->
       <nav
-        class="flex flex-col space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0"
+        class="flex flex-col justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0 w-full"
       >
         <a
           href="./presupuesto-opcion-1.html"
-          class="[background:linear-gradient(144deg,rgba(65,127,255,1)_0%,rgba(105,4,255,1)_100%);] hover:[background:linear-gradient(144deg,rgba(69,59,236,1)_0%,_rgba(160,102,246,1)_100%);] text-white px-6 py-3 rounded-md shadow-md transition-all animate-fadeIn min-w-[150px]"
+          class="[background:linear-gradient(144deg,rgba(65,127,255,1)_0%,rgba(105,4,255,1)_100%);] hover:[background:linear-gradient(144deg,rgba(69,59,236,1)_0%,_rgba(160,102,246,1)_100%);] text-white px-6 py-3 rounded-md shadow-md transition-all animate-fadeIn  w-full sm:min-w-[150px] sm:w-auto"
         >
           Básica
         </a>
         <a
           href="./presupuesto-opcion-2.html"
-          class="[background:linear-gradient(144deg,rgba(65,127,255,1)_0%,rgba(105,4,255,1)_100%);] hover:[background:linear-gradient(144deg,rgba(69,59,236,1)_0%,_rgba(160,102,246,1)_100%);] text-white px-6 py-3 rounded-md shadow-md transition-all animate-fadeIn min-w-[150px]"
+          class="[background:linear-gradient(144deg,rgba(65,127,255,1)_0%,rgba(105,4,255,1)_100%);] hover:[background:linear-gradient(144deg,rgba(69,59,236,1)_0%,_rgba(160,102,246,1)_100%);] text-white px-6 py-3 rounded-md shadow-md transition-all animate-fadeIn  w-full sm:min-w-[150px] sm:w-auto"
         >
           Profesional
         </a>
         <a
           href="./presupuesto-opcion-3.html"
-          class="[background:linear-gradient(144deg,rgba(65,127,255,1)_0%,rgba(105,4,255,1)_100%);] hover:[background:linear-gradient(144deg,rgba(69,59,236,1)_0%,_rgba(160,102,246,1)_100%);] text-white px-6 py-3 rounded-md shadow-md transition-all animate-fadeIn min-w-[150px]"
+          class="[background:linear-gradient(144deg,rgba(65,127,255,1)_0%,rgba(105,4,255,1)_100%);] hover:[background:linear-gradient(144deg,rgba(69,59,236,1)_0%,_rgba(160,102,246,1)_100%);] text-white px-6 py-3 rounded-md shadow-md transition-all animate-fadeIn  w-full sm:min-w-[150px] sm:w-auto"
         >
           Empresarial
         </a>
       </nav>
-      <div class="mt-8 text-gray-600 max-w-lg">
+      <div class="rounded-lg bg-white bg-opacity-20 shadow-md border-gray-300 p-2.5 sm:p-6 text-sm text-start mt-8 text-gray-600 max-w-lg min-h-[100px] h-full max-h-[235px] overflow-y-auto">
+        <p class="text-base"><strong>Aviso:</strong></p>
         <p>Todas las propuestas se formulan dentro de un <strong>marco general</strong>, con el fin de orientar el proceso hacia la meta planteada.</p>
-        <p>Es importante destacar que, en cada una de las opciones ofrecidas por <strong>Ding</strong>, pueden surgir <i>detalles no deseados, innecesarios (según el criterio de quien reciba la propuesta) o faltantes.</i></p>
+        <p>Es importante destacar que, en cada una de las opciones ofrecidas por <strong>Ding</strong>, pueden surgir <span>detalles no deseados, innecesarios o faltantes, según el criterio del cliente.</span></p>
         <p>Para lograr un mayor acercamiento a las necesidades específicas, <strong>Ding recomienda</strong> programar una reunión por Meet, Zoom o la plataforma que resulte más conveniente.</p>
       </div>
       <div
-        class="absolute bottom-0 flex-col sm:flex-row items-center gap-4 animate-fadeIn my-6"
+        class="absolute bottom-0 flex-col sm:flex-row items-center gap-4 animate-fadeIn my-2.5"
       >
         <div
           class="flex items-center transition-all text-cyan-700 hover:cursor-pointer hover:text-cyan-600 gap-2 my-1"
