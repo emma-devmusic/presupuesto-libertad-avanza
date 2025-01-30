@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es" class="overflow-x-hidden">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Pantalla de Bienvenida - Presupuestos</title>
+    <!-- Cargar Tailwind desde CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            keyframes: {
+              fadeIn: {
+                "0%": { opacity: "0" },
+                "100%": { opacity: "1" },
+              },
+              slideRight: {
+                "0%": { opacity: "0", transform: "translateX(-10%)" },
+                "100%": { opacity: "1", transform: "translateX(0)" },
+              },
+              slideLeft: {
+                "0%": { opacity: "0", transform: "translateX(10%)" },
+                "100%": { opacity: "1", transform: "translateX(0)" },
+              },
+            },
+            animation: {
+              fadeIn: "fadeIn 1.2s ease-in forwards",
+              slideRight: "slideRight 0.8s ease-in forwards",
+              slideLeft: "slideLeft 0.8s ease-in forwards",
+            },
+          },
+        },
+      };
+    </script>
+    <!-- Metadatos para dispositivos móviles -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body
+    class="bg-gray-50 text-gray-800 font-sans overflow-x-hidden overflow-y-hidden relative"
+  >
+    <!-- Fondo decorativo (igual que en los ejemplos anteriores) -->
+    <div
+      class="fixed z-0 w-[100vw] h-[100vh] opacity-50"
+      style="background-image: url('./assets/img/sky.jpg')"
+    ></div>
+    <div
+      class="parallax-layer absolute -top-[300px] sm:left-[250px] md:left-[450px] lg:left-[600px] xl:left-[900px] z-20 w-[100vw] h-[2000px] opacity-60 md:opacity-60 mx-auto"
+      style="
+        background-image: url('./assets/img/nube-1.png');
+        background-repeat: no-repeat;
+      "
+      data-speed="0.7"
+    ></div>
+    <div
+      class="parallax-layer absolute -top-[600px] sm:left-[250px] md:left-[450px] lg:left-[600px] xl:left-[900px] z-20 w-[100vw] h-[2000px] opacity-60 md:opacity-60 mx-auto"
+      style="
+        background-image: url('./assets/img/nube-2.png');
+        background-repeat: no-repeat;
+      "
+      data-speed="0.9"
+    ></div>
+    <div
+      class="parallax-layer absolute top-[600px] sm:left-[250px] md:left-[450px] lg:left-[600px] xl:left-[900px] z-20 w-[100vw] h-[2000px] opacity-60 md:opacity-60 mx-auto"
+      style="
+        background-image: url('./assets/img/nube-3.png');
+        background-repeat: no-repeat;
+      "
+      data-speed="0.4"
+    ></div>
+
+    <!-- Contenedor principal -->
+    <div
+      class="container mx-auto px-4 py-8 relative z-50 h-[100vh] flex flex-col justify-center items-center text-center"
+    >
+      <!-- ENCABEZADO DE BIENVENIDA -->
+      <header class="mb-8">
+        <figure class="mb-4">
+          <img
+            src="./assets/img/logo-ding.png"
+            alt="Logo Ding"
+            class="mx-auto max-h-[120px] sm:max-h-[150px] object-cover w-full max-w-[280px] sm:max-w-[350px] animate-fadeIn"
+          />
+        </figure>
+        <h1
+          class="text-3xl font-bold text-gray-700 uppercase mb-4 animate-slideLeft"
+        >
+          ¡Bienvenido!
+        </h1>
+        <p class="text-lg text-gray-600 animate-slideRight">
+          Selecciona la propuesta de tu interés
+        </p>
+      </header>
+
+      <!-- NAVEGADOR DE LINKS -->
+      <nav
+        class="flex flex-col space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0"
+      >
+        <a
+          href="./presupuesto-opcion-1.html"
+          class="[background:linear-gradient(144deg,rgba(65,127,255,1)_0%,rgba(105,4,255,1)_100%);] hover:[background:linear-gradient(144deg,rgba(69,59,236,1)_0%,_rgba(160,102,246,1)_100%);] text-white px-6 py-3 rounded-md shadow-md transition-all animate-fadeIn"
+        >
+          Básica
+        </a>
+        <a
+          href="./presupuesto-opcion-2.html"
+          class="[background:linear-gradient(144deg,rgba(65,127,255,1)_0%,rgba(105,4,255,1)_100%);] hover:[background:linear-gradient(144deg,rgba(69,59,236,1)_0%,_rgba(160,102,246,1)_100%);] text-white px-6 py-3 rounded-md shadow-md transition-all animate-fadeIn"
+        >
+          Profesional
+        </a>
+        <a
+          href="./presupuesto-opcion-3.html"
+          class="[background:linear-gradient(144deg,rgba(65,127,255,1)_0%,rgba(105,4,255,1)_100%);] hover:[background:linear-gradient(144deg,rgba(69,59,236,1)_0%,_rgba(160,102,246,1)_100%);] text-white px-6 py-3 rounded-md shadow-md transition-all animate-fadeIn"
+        >
+          Empresarial
+        </a>
+      </nav>
+      <div
+        class="absolute bottom-0 flex-col sm:flex-row items-center gap-4 animate-fadeIn my-6"
+      >
+        <div
+          class="flex items-center transition-all text-cyan-700 hover:cursor-pointer hover:text-cyan-600 gap-2 my-1"
+        >
+          <img src="./ding.png" class="h-5 w-5 object-cover" />
+          <a target="_blank" href="https://ding.com.ar" class="text-md"
+            >Ding | Marketing & Development</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- Script para efecto parallax y animaciones de scroll -->
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>

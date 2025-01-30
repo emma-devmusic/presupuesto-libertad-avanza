@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="es" class="overflow-x-hidden">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Presupuesto de Proyecto - Ecommerce en WordPress</title>
+    <!-- Cargar Tailwind desde CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            keyframes: {
+              fadeIn: {
+                "0%": { opacity: "0" },
+                "100%": { opacity: "1" },
+              },
+              slideRight: {
+                "0%": { opacity: "0", transform: "translateX(-10%)" },
+                "100%": { opacity: "1", transform: "translateX(0)" },
+              },
+              slideLeft: {
+                "0%": { opacity: "0", transform: "translateX(10%)" },
+                "100%": { opacity: "1", transform: "translateX(0)" },
+              },
+            },
+            animation: {
+              fadeIn: "fadeIn 1.2s ease-in forwards",
+              slideRight: "slideRight 0.8s ease-in forwards",
+              slideLeft: "slideLeft 0.8s ease-in forwards",
+            },
+          },
+        },
+      };
+    </script>
+    <!-- Metadatos para dispositivos móviles -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      h3 {
+        color: #0d9488 !important;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50 text-gray-800 font-sans overflow-x-hidden overflow-y-hidden relative">
+    <!-- Fondo decorativo (opcional) -->
+    <div
+      class="fixed z-0 w-[100vw] h-[100vh] opacity-50"
+      style="background-image: url('./assets/img/sky.jpg')"
+    ></div>
+    <div
+      class="parallax-layer absolute top-[2000px] sm:left-[250px] md:left-[450px] lg:left-[600px] xl:left-[900px] z-10 w-[100vw] h-[2000px] opacity-20 md:opacity-60 mx-auto"
+      style="background-image: url('./assets/img/man-rocket.png'); background-repeat: no-repeat;"
+      data-speed="0.5"
+    ></div>
+    <div
+      class="parallax-layer absolute top-[4000px] sm:left-[250px] md:left-[450px] lg:left-[600px] xl:left-[900px] z-10 w-[100vw] h-[2000px] opacity-20 md:opacity-40 mx-auto"
+      style="background-image: url('./assets/img/rocket.png'); background-repeat: no-repeat;"
+      data-speed="0.5"
+    ></div>
+    <div
+      class="parallax-layer absolute top-[200px] sm:left-[250px] md:left-[450px] lg:left-[600px] xl:left-[900px] z-20 w-[100vw] h-[2000px] opacity-60 md:opacity-60 mx-auto"
+      style="background-image: url('./assets/img/nube-1.png'); background-repeat: no-repeat;"
+      data-speed="0.7"
+    ></div>
+    <div
+      class="parallax-layer absolute top-[400px] sm:left-[250px] md:left-[450px] lg:left-[600px] xl:left-[900px] z-20 w-[100vw] h-[2000px] opacity-60 md:opacity-60 mx-auto"
+      style="background-image: url('./assets/img/nube-2.png'); background-repeat: no-repeat;"
+      data-speed="0.9"
+    ></div>
+    <div
+      class="parallax-layer absolute top-[5500px] sm:top-[4500px] sm:left-[250px] md:left-[450px] lg:left-[600px] xl:left-[900px] z-20 w-[100vw] h-[2000px] opacity-60 md:opacity-60 mx-auto"
+      style="background-image: url('./assets/img/nube-1.png'); background-repeat: no-repeat;"
+      data-speed="0.4"
+    ></div>
+    <div
+      class="parallax-layer absolute top-[5200px] sm:top-[4800px] sm:left-[250px] md:left-[450px] lg:left-[600px] xl:left-[900px] z-20 w-[100vw] h-[2000px] opacity-60 md:opacity-60 mx-auto"
+      style="background-image: url('./assets/img/nube-3.png'); background-repeat: no-repeat;"
+      data-speed="0.8"
+    ></div>
+    <div
+      class="parallax-layer absolute top-[6000px] sm:top-[5000px] md:top-[4500px] lg:top-[4200px] sm:left-[250px] md:left-[450px] lg:left-[600px] xl:left-[900px] z-20 w-full h-full opacity-10 md:opacity-20 mx-auto"
+      style="background-image: url('./assets/img/ding.png'); background-repeat: no-repeat;"
+      data-speed="0.1"
+    ></div>
+    <div class="fixed bottom-[20px] right-[10px] z-[99]">
+        <a
+            href="./"
+            class="[background:linear-gradient(144deg,rgba(65,127,255,1)_0%,rgba(105,4,255,1)_100%);] hover:[background:linear-gradient(144deg,rgba(69,59,236,1)_0%,_rgba(160,102,246,1)_100%);] text-white px-6 py-3 rounded-md shadow-md hover:opacity-80 transition-all animate-fadeIn relative z-[99]"
+        >
+            Ir Atrás
+        </a>
+    </div>
+    <!-- Contenedor principal -->
+    <div class="container mx-auto px-4 py-8 relative z-50">
+      <!-- ENCABEZADO PRINCIPAL -->
+      <header class="text-center mb-8">
+        <!-- Logo o imagen representativa -->
+        <figure class="mb-4 text-center">
+          <img
+            src="./assets/img/logo-ding.png"
+            alt="Logo de ejemplo"
+            class="mx-auto max-h-[120px] sm:max-h-[150px] lg:max-h-[260px] object-cover w-full max-w-[280px] sm:max-w-[350px] lg:max-w-[500px] animate-fadeIn"
+          />
+        </figure>
+        <h1
+          class="text-3xl font-bold text-gray-700 uppercase mb-2 animate-slideLeft"
+        >
+          Presupuesto de Proyecto
+        </h1>
+        <h2 class="text-xl text-teal-600 font-semibold animate-slideRight">
+          Desarrollo de Ecommerce en WordPress
+        </h2>
+      </header>
+
+        <div class="mx-auto max-w-[1024px]">
+          <hr class="border-gray-300 my-8" />
+          <!-- 1. DESCRIPCIÓN GENERAL DEL PROYECTO -->
+          <section class="mb-8" data-animated="fade-right">
+            <h3 class="text-2xl font-semibold text-gray-700 mb-4">
+              Detalles Generales
+            </h3>
+            <p class="mb-2">
+              La <strong>Opción 1</strong> está diseñada para clientes que buscan una solución efectiva y económica para establecer una presencia en línea básica con capacidades de captura de leads. Esta opción incluye la creación de una landing page optimizada para la conversión, la integración de un formulario personalizado y la configuración de un sistema de almacenamiento de datos mediante Google Sheets.
+            </p>
+          <hr class="border-gray-300 my-8" />
+
+            <div class="flex flex-col sm:flex-row justify-center items-center my-6 gap-4">
+              <!-- <figure class="text-center">
+                <img
+                src="./wordpress-1.png"
+                alt="Flujo de Trabajo"
+                class="mx-auto rounded-md shadow shadow-gray-500"
+                />
+                <figcaption class="text-sm text-gray-500 italic mt-2">
+                  *Imagen de ejemplo de un Ecommerce con WordPress personalizado.*
+                </figcaption>
+              </figure>
+              <figure class="text-center">
+                <img
+                src="./wordpress-2.png"
+                alt="Flujo de Trabajo"
+                class="mx-auto rounded-md shadow shadow-gray-500"
+              />
+              <figcaption class="text-sm text-gray-500 italic mt-2">
+                *Imagen de ejemplo de un Ecommerce con WordPress personalizado.*
+              </figcaption>
+            </figure> -->
+          </div>
+          </section>
+
+          <!-- 2. ALCANCE DEL PROYECTO -->
+          <article class="rounded-lg p-6 space-y-4 mb-6">
+            <h4 class="text-xl font-bold text-gray-900">
+              Presupuesto - Opción 1 <br />
+              <span class="text-base text-gray-700"
+                >(Landing Page + Formulario + Google Sheets)</span>
+            </h4>
+            <p>
+              A continuación, se detalla la propuesta para el desarrollo de una
+              landing page con un formulario integrado y la configuración de un
+              archivo de Google Sheets para almacenar los datos capturados:
+            </p>
+
+            <ol class="list-decimal list-inside space-y-2">
+              <li>
+                <strong>Landing Page</strong><br />
+                Diseño y maquetación de una página web de aterrizaje enfocada en
+                la conversión. Adaptación de la estética y contenido según la
+                identidad de marca. Implementación de estructura y secciones
+                básicas (hero, descripción del servicio, beneficios, llamados a la
+                acción).
+              </li>
+              <li>
+                <strong>Formulario</strong><br />
+                Configuración y diseño de campos necesarios (nombre, email,
+                teléfono, mensaje, u otros requeridos). Integración de validaciones
+                básicas para mejorar la calidad de los datos recopilados.
+              </li>
+              <li>
+                <strong>Integración con Google Sheets</strong><br />
+                Creación y configuración de un archivo de Google Sheets. Conexión
+                del formulario con la hoja de cálculo para que los datos se
+                almacenen automáticamente. Verificación y prueba de la integración
+                para garantizar el correcto funcionamiento de la captura de
+                información.
+              </li>
+            </ol>
+
+            <div>
+              <strong>Incluye:</strong>
+              <ul class="list-disc list-inside ml-4 space-y-1">
+                <li>
+                  Desarrollo de la landing page responsive (adaptada a móviles).
+                </li>
+                <li>
+                  Optimización básica en cuanto a velocidad de carga y SEO
+                  on-page.
+                </li>
+                <li>
+                  Pruebas finales de funcionalidad y corrección de posibles errores
+                  antes de la entrega.
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <strong>No Incluye:</strong>
+              <ul class="list-disc list-inside ml-4 space-y-1">
+                <li>Dominio y hosting (costos aparte).</li>
+                <li>
+                  Redacción de contenidos y/o copywriting (deberá ser provisto por
+                  el cliente o presupuestado por separado).
+                </li>
+                <li>
+                  Mantenimiento y actualizaciones posteriores (posible contratación
+                  adicional).
+                </li>
+              </ul>
+            </div>
+
+            <p class="font-semibold">
+              <strong>Costo Total:</strong> $345.000,00 (Pesos Argentinos)
+            </p>
+            <p class="font-semibold">
+              <strong>Plazo de Entrega Estimado:</strong> 7 días hábiles a partir
+              de la confirmación y entrega de materiales necesarios.
+            </p>
+
+            <p>
+              En caso de requerir alguna modificación en las funcionalidades o
+              secciones planteadas, se revisará el alcance para presentar un ajuste
+              en el presupuesto si correspondiera.
+            </p>
+          </article>
+        <!-- 9. CONCLUSIÓN -->
+        <section data-animated="fade-right">
+          <h3 class="text-2xl font-semibold text-gray-700 mb-4">Conclusión</h3>
+          <p class="mb-4">
+            La <strong>Opción 1</strong> ofrece una solución económica y efectiva para aquellos que buscan establecer una presencia en línea básica con capacidades de captación de leads. Es ideal para pequeñas empresas y startups que desean iniciar su estrategia digital sin una inversión significativa, garantizando una implementación rápida y una gestión simplificada de la información recopilada. Esta opción permite comenzar a generar leads de manera eficiente mientras se mantiene un control accesible sobre los datos obtenidos.
+          </p>
+          <p class="mb-6">
+            <strong>A la espera de su aprobación,</strong> quedamos a disposición
+            para realizar ajustes o resolver cualquier consulta que surja,
+            garantizando que el proyecto se adecúe plenamente a sus necesidades.
+          </p>
+          <p class="text-lg">
+            <strong>Atentamente,</strong><br />
+            <div
+              class="flex items-center transition-all text-cyan-700 hover:cursor-pointer hover:text-cyan-600 gap-2 my-1"
+            >
+              <img src="./ding.png" class="h-5 w-5 object-cover" />
+              <a target="_blank" href="https://ding.com.ar" class="text-md"
+                >Ding | Marketing &amp; Development</a
+              >
+            </div>
+            <div
+              class="flex items-center transition-all text-red-400 hover:text-red-500 hover:cursor-pointer gap-2 my-1"
+            >
+              <svg
+                class="h-5 w-5"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  color="currentColor"
+                >
+                  <path
+                    d="M2.5 12c0-4.478 0-6.718 1.391-8.109S7.521 2.5 12 2.5c4.478 0 6.718 0 8.109 1.391S21.5 7.521 21.5 12c0 4.478 0 6.718-1.391 8.109S16.479 21.5 12 21.5c-4.478 0-6.718 0-8.109-1.391S2.5 16.479 2.5 12"
+                  />
+                  <path
+                    d="M16.5 12a4.5 4.5 0 1 1-9 0a4.5 4.5 0 0 1 9 0m1.008-5.5h-.01"
+                  />
+                </g>
+              </svg>
+              <a
+                target="_blank"
+                href="https://www.instagram.com/ding_marketing/"
+                class="text-md"
+                >instagram</a
+              >
+            </div>
+            <div
+              class="flex items-center transition-all text-gray-600 hover:text-gray-500 hover:cursor-pointer gap-2 my-1"
+            >
+              <svg
+                class="h-4 w-4 relative bottom-[2px] left-[2px]"
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill="currentColor"
+                  d="M5.673 0a.7.7 0 0 1 .7.7v1.309h7.517v-1.3a.7.7 0 0 1 1.4 0v1.3H18a2 2 0 0 1 2 1.999v13.993A2 2 0 0 1 18 20H2a2 2 0 0 1-2-1.999V4.008a2 2 0 0 1 2-1.999h2.973V.699a.7.7 0 0 1 .7-.699M1.4 7.742v10.259a.6.6 0 0 0 .6.6h16a.6.6 0 0 0 .6-.6V7.756zm5.267 6.877v1.666H5v-1.666zm4.166 0v1.666H9.167v-1.666zm4.167 0v1.666h-1.667v-1.666zm-8.333-3.977v1.666H5v-1.666zm4.166 0v1.666H9.167v-1.666zm4.167 0v1.666h-1.667v-1.666zM4.973 3.408H2a.6.6 0 0 0-.6.6v2.335l17.2.014V4.008a.6.6 0 0 0-.6-.6h-2.71v.929a.7.7 0 0 1-1.4 0v-.929H6.373v.92a.7.7 0 0 1-1.4 0z"
+                />
+              </svg>
+              <i class="text-md">29/01/2025</i>
+            </div>
+          </p>
+        </section>
+      </div>
+    </div>
+
+    <!-- FIN container -->
+
+    <!-- Script para animaciones (opcional) -->
+    <script src="./assets/js/main.js" ></script>
+  </body>
+</html>
